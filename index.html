@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Html test</title>
+        <link rel="stylesheet" href="main.css">
+        <style>
+            h1{
+                color: green;
+            }
+        </style>
+        <meta name="keywords" content="food,spi">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1 style="color: black;" onclick="changeHtml()" id='name'>Amol</h1>
+        <h1 id='header'>This is a Heading</h1>
+        <p>This is a paragraph.</p>
+    </body>
+    <script>
+        // $(function() {
+        //     // Executes when the HTML document is loaded and the DOM is ready
+        //     //It will not wait for the images, frames to get fully load.
+        //     console.log( "ready!",a,b);
+        // });
+        $(document).ready(()=>{
+            // Executes when the HTML document is loaded and the DOM is ready
+            // It will not wait for the images, frames to get fully load.
+            //console.log( "ready!");
+            uru();
+        });
+
+        $(window).on("load", function() {
+            // Executes when complete page is fully loaded, including
+            // all frames, objects and images
+            //console.log("Window is loaded");
+        });
+
+        function uru(){
+            for(var i=0;i<10;i++){
+                //console.log('in',i);
+            }
+            //console.log('out',i);
+        }
+
+        // function uru(){ //scope
+        //     var i;
+        //     for(i=0;i<10;i++){
+        //         console.log('in',i);
+        //     }
+        //     console.log('out',i);
+        // }
+
+        // function uru(){
+        //     for(let i=0;i<10;i++){
+        //         console.log('in',i);
+        //     }
+        //     console.log('out',i);
+        // }
+        
+        function changeHtml(){
+            element = document.getElementById("name");
+            console.log('element js',element);
+            element.innerHTML = 'urvashi';
+            setTimeout(() => {
+                element = $("#name");
+                element.html('jquery changed html')
+                console.log('element jquery',element); 
+            }, 5000);
+
+            //Task what it does tell me
+            setInterval(() => {
+                
+            }, 1000);
+
+            clearInterval();
+        }
+    </script>
+</html>
